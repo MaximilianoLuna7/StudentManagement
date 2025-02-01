@@ -1,9 +1,22 @@
-HELP.md
+# Archivos de compilación y dependencias
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.ear
 
+# Archivos de configuración sensible (excluir application.properties)
+src/main/resources/application.properties
+
+# Archivos de configuración local (opcional, si tienes otros archivos sensibles)
+*.local.*
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.cache
+
+# Archivos de IDE
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +44,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
