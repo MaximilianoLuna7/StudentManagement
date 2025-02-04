@@ -6,6 +6,7 @@ Este documento describe las historias de usuario para el sistema de gestión de 
 ## Roles de Usuario
 - **ADMIN**: Administrador del sistema.
 - **TEACHER**: Profesor que dicta materias.
+- **Usuario General**: Usuario que se registra e inicia sesión.
 
 ## Historias de Usuario
 
@@ -13,6 +14,9 @@ Este documento describe las historias de usuario para el sistema de gestión de 
 1. Como ADMIN, quiero crear una nueva carrera para ofrecer nuevas opciones académicas.
 2. Como ADMIN, quiero actualizar la información de una carrera existente para mantener los datos actualizados.
 3. Como ADMIN, quiero eliminar una carrera para dejar de ofrecerla.
+4. Como ADMIN, quiero ver el listado de todos los usuarios para gestionar sus permisos y roles.
+5. Como ADMIN, quiero actualizar el rol de un usuario para asignarle permisos específicos (ADMIN, TEACHER).
+6. Como ADMIN, quiero desactivar un usuario para revocar su acceso al sistema.
 
 ### Rol: TEACHER
 1. Como TEACHER, quiero registrar un nuevo estudiante para llevar un control de los alumnos en mis materias.
@@ -40,8 +44,24 @@ Este documento describe las historias de usuario para el sistema de gestión de 
 23. Como TEACHER, quiero ver el listado de todas las clases de una materia para revisar lo que se ha enseñado.
 24. Como TEACHER, quiero ver el listado de asistencias de una clase particular para conocer la participación en esa sesión.
 25. Como TEACHER, quiero ver el listado de calificaciones asignadas en una clase particular para revisar las evaluaciones de esa sesión.
+26. Como TEACHER, quiero registrarme en el sistema para poder acceder a las funcionalidades.
+27. Como TEACHER, quiero iniciar sesión en el sistema para acceder a mis materias y estudiantes.
+28. Como TEACHER, quiero actualizar mi información personal (nombre, correo, contraseña) para mantener mis datos actualizados.
+29. Como TEACHER, quiero cerrar sesión para proteger mi cuenta.
+
+### Rol: Usuario General
+1. Como usuario, quiero registrarme en el sistema para poder acceder a las funcionalidades.
+2. Como usuario, quiero iniciar sesión en el sistema para poder acceder a mis datos y funcionalidades.
+3. Como usuario, quiero cerrar sesión para proteger mi cuenta.
 
 ## Casos de Uso
+- Listar usuarios.
+- Actualizar rol de usuario.
+- Desactivar usuario.
+- Registrar usuario.
+- Iniciar sesión
+- Actualizar información de usuario.
+- Cerrar sesión.
 - Crear carrera.
 - Actualizar carrera.
 - Eliminar carrera.
@@ -72,10 +92,12 @@ Este documento describe las historias de usuario para el sistema de gestión de 
 - Ver listado de calificaciones de una clase.
 
 ## Priorización
-- Alta: Crear carrera, Registrar estudiante, Inscribir estudiante en materia, Registrar clase, Registrar asistencia, Registrar calificación.
-- Media: Actualizar carrera, Actualizar estudiante, Actualizar estado de inscripción, Actualizar clase, Actualizar asistencia, Actualizar calificación.
-- Baja: Eliminar carrera, Eliminar estudiante, Eliminar inscripción, Eliminar clase, Eliminar asistencia, Eliminar calificación.
+- Alta: Registrar usuario, Iniciar sesión, Cerrar sesión, Crear carrera, Registrar estudiante, Inscribir estudiante en materia, Registrar clase, Registrar asistencia, Registrar calificación.
+- Media: Actualizar información de usuario, Listar usuarios, Actualizar rol de usuario, Actualizar carrera, Actualizar estudiante, Actualizar estado de inscripción, Actualizar clase, Actualizar asistencia, Actualizar calificación.
+- Baja: Desactivar usuario, Eliminar carrera, Eliminar estudiante, Eliminar inscripción, Eliminar clase, Eliminar asistencia, Eliminar calificación.
 
 ## Notas Adicionales
+- La autenticación se implementará usando JWT (JSON Web Tokens).
+- La contraseña se almacenará de manera segura usando hashing (por ejemplo, BCrypt).
 - El soft delete se implementará para todas las entidades.
 - Las consultas de listados son críticas para la gestión diaria de los docentes.
