@@ -1,18 +1,20 @@
 package com.maxiluna.student_management.domain.models;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 /**
- * Clase abstracta base para implementar el patrón de eliminación lógica (soft delete).
- * Todas las entidades del sistema heredan de esta clase para incluir el campo `isDeleted`.
+ * Abstract base class to implement the soft delete pattern.
+ * All entities in the system inherit from this class to include the `isDeleted` field.
  */
 @Getter
 @Setter
 @ToString
 @SuperBuilder
+@EqualsAndHashCode
 public abstract class SoftDeleteEntity {
     private boolean isDeleted;
 

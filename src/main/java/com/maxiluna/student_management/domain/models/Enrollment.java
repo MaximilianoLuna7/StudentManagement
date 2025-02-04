@@ -9,6 +9,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Enrollment extends SoftDeleteEntity {
     private Long id;
     private Student student;

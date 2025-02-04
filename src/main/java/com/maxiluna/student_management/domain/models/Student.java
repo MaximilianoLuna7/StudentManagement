@@ -11,6 +11,7 @@ import java.time.Period;
 @AllArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Student extends SoftDeleteEntity {
     private Long id;
     private String firstName;
@@ -20,8 +21,4 @@ public class Student extends SoftDeleteEntity {
     private String dni;
     private String city;
     private Integer admissionYear;
-
-    public int calculateAge() {
-        return Period.between(this.birthDate, LocalDate.now()).getYears();
-    }
 }

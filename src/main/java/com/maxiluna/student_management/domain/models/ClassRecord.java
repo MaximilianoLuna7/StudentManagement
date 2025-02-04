@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class ClassRecord extends SoftDeleteEntity {
     private Long id;
     private String topic;

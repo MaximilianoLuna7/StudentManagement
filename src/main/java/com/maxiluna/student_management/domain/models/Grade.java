@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Grade extends SoftDeleteEntity {
     private Long id;
     private LocalDate recordDate;

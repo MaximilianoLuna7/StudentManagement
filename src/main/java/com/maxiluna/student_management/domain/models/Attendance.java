@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Attendance extends SoftDeleteEntity {
     private Long id;
     private LocalDate dateRecord;
