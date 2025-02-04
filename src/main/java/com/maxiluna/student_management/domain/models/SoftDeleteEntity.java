@@ -5,6 +5,10 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * Clase abstracta base para implementar el patrón de eliminación lógica (soft delete).
+ * Todas las entidades del sistema heredan de esta clase para incluir el campo `isDeleted`.
+ */
 @Getter
 @Setter
 @ToString
