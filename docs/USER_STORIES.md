@@ -23,6 +23,7 @@ Este documento describe las historias de usuario para el sistema de gestión de 
 2. Como TEACHER, quiero actualizar la información de un estudiante existente para corregir errores o actualizar datos.
 3. Como TEACHER, quiero eliminar un estudiante para dejar de gestionarlo.
 4. Como TEACHER, quiero inscribir a un estudiante en una materia para que pueda cursarla.
+5. Como TEACHER, quiero ver el estado de un estudiante en una materia específica para conocer su progreso.
 5. Como TEACHER, quiero actualizar el estado de una inscripción (REGULAR, UNSUCCESSFUL, APPROVED) para reflejar el progreso del estudiante.
 6. Como TEACHER, quiero eliminar una inscripción para cancelar la participación de un estudiante en una materia.
 7. Como TEACHER, quiero registrar una clase para llevar un control de lo que se enseña en cada sesión.
